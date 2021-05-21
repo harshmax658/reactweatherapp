@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import AccessibilityNewIcon from '@material-ui/icons/AccessibilityNew';
-import axios from 'axios';
+
 const Weather = () => {
     const [city, setCity] = useState(null);
     const [search, setSearch] = useState('delhi');
-    const API_key = `a4a16998b2d5d7273954cd5063f381c0`;
+    
     useEffect(() => {
-        const url = `http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=${API_key}`
+        const key = `a4a16998b2d5d7273954cd5063f381c0`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=${key}`
     
         const data1 = async () => {
 
